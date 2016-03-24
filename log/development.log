@@ -1020,3 +1020,102 @@ Processing by LinksController#show as HTML
   Rendered collection (0.0ms)
   Rendered links/show.html.erb within layouts/application (176.0ms)
 Completed 200 OK in 397ms (Views: 391.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-24 23:44:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (1.2ms)[0m  SELECT "links".* FROM "links"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (4.9ms)[0m  SELECT COUNT(*) FROM "votes"  WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = 't' AND "votes"."vote_scope" IS NULL  [["votable_id", 1], ["votable_type", "Link"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "votes"  WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = 'f' AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 1], ["votable_type", "Link"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes"  WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = 't' AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Link"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes"  WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = 'f' AND "votes"."vote_scope" IS NULL  [["votable_id", 2], ["votable_type", "Link"]]
+  Rendered links/index.html.erb within layouts/application (193.5ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 844ms (Views: 765.3ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/links.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-24 23:44:03 +0000
+
+
+Started GET "/links/1" for 127.0.0.1 at 2016-03-24 23:44:07 +0000
+Processing by LinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLink Load (0.4ms)[0m  SELECT  "links".* FROM "links"  WHERE "links"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes"  WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = 't' AND "votes"."vote_scope" IS NULL  [["votable_id", 1], ["votable_type", "Link"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes"  WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = 'f' AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 1], ["votable_type", "Link"]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."link_id" = ?[0m  [["link_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."link_id" = ?  [["link_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered links/show.html.erb within layouts/application (272.1ms)
+Completed 200 OK in 568ms (Views: 559.2ms | ActiveRecord: 5.8ms)
